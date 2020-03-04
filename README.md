@@ -8,7 +8,7 @@
 
 接著再到AppofGod中將整包clone下來
 
-最後在Android的手機或是手機模擬器上使用即可
+最後在Android/IOS的手機或是手機模擬器上使用即可
 
 
 #APP功能介紹
