@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table>
+            <% var first = true; %>
+        <% for(let i in image_list){ %>
+            <tr style="<% if(!first){ %>display:none;<% } %>">
+                <% first = false %>
+                <td>
+                        <% for(let j in image_list[i]){ %>
+                            <div style="border: 2px solid black;position:absolute;top:<%= image_list[i][j].faceRectangle.top %>px;left:<%= image_list[i][j].faceRectangle.left %>px;width:<%= image_list[i][j].faceRectangle.width %>px;height:<%= image_list[i][j].faceRectangle.height %>px;"></div>
+                        <% } %>
+                    <img  src="<%= i %>">
+                </td>
+                <td>
+                    <input value="<%= image_list[i][0].title %>"/>
+                    <input value="<%= image_list[i][0].place %>"/>
+                    <button class="update">更新</button>
+                </td>
+            </tr>
+        <% } %>
+        </table>
+    </body>
+</html>
